@@ -3,8 +3,8 @@ import { View, FlatList, Text, StyleSheet, ActivityIndicator, SafeAreaView } fro
 import { searchRecipes, getCategories, getRecipesByCategory } from '../services/api';
 import RecipeCard from '../components/RecipeCard';
 import SearchBar from '../components/SearchBar';
-import CategoryList from '../components/CategoryList';
-import { Recipe, Category } from '../types';
+import CategoryList from '../components/CategroyList';
+import { Recipe, Category } from '../types/types';
 
 const HomeScreen = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([]);
