@@ -1,4 +1,4 @@
-import Icon from '@react-native-vector-icons/ionicons';
+import Icon from 'react-native-vector-icons/Ionicons';
 import React from 'react';
 import { View, TextInput, StyleSheet, TouchableOpacity } from 'react-native';
 // import Icon from 'react-native-vector-icons/ionicons';

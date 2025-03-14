@@ -1,52 +1,18 @@
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  // ScrollView,
-  // StatusBar,
-  // StyleSheet,
-  // Text,
-  useColorScheme,
-  // View,
-} from 'react-native';
-
-// import {
-//   Colors,
-//   // DebugInstructions,
-//   // Header,
-//   // LearnMoreLinks,
-//   // ReloadInstructions,
-// } from 'react-native/Libraries/NewAppScreen';
+import { StatusBar } from 'react-native';
 import AppNavigator from './navigation/AppNavigator';
-
-
+import { FavoritesProvider } from './context/FavoritesContext';
+import { UserRecipesProvider } from './context/UserRecipesContext';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-
-
-
-  return  <AppNavigator />;
+  return (
+    <FavoritesProvider>
+      <UserRecipesProvider>
+        <StatusBar />
+        <AppNavigator />
+      </UserRecipesProvider>
+    </FavoritesProvider>
+  );
 }
-
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
 
 export default App;
