@@ -2,30 +2,30 @@ import React, { useEffect, useState } from 'react';
 import { View, FlatList, Text } from 'react-native';
 import RecipeCard from '../components/RecipeCard';
 // import SearchBar from '../components/SearchBar';
-import { getRecipes } from '../services/api';
+// import { getRecipes } from '../services/api';
 // import { API_BASE_URL, API_KEY } from '@env';
 const HomeScreen = () => {
   const [recipes, setRecipes] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  useEffect(() => {
-    const loadRecipes = async () => {
-      try {
-        const data = await getRecipes(searchTerm);
-        setRecipes(data);
-      } catch (error) {
-        // Handle error
-      }
-    };
+  // useEffect(() => {
+  //   const loadRecipes = async () => {
+  //     try {
+  //       const data = await getRecipes(searchTerm);
+  //       setRecipes(data);
+  //     } catch (error) {
+  //       // Handle error
+  //     }
+  //   };
     
     
     
-    const timeoutId = setTimeout(() => {
-      loadRecipes();
-    }, 500);
+  //   const timeoutId = setTimeout(() => {
+  //     loadRecipes();
+  //   }, 500);
 
-    return () => clearTimeout(timeoutId);
-  }, [searchTerm]);
+  //   return () => clearTimeout(timeoutId);
+  // }, [searchTerm]);
 
   return (
     <View>

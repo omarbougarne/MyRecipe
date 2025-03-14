@@ -6,7 +6,7 @@ import HomeScreen from '../screens/HomeScreen';
 import RecipeDetailScreen from '../screens/RecipeDetailScreen';
 import FavoritesScreen from '../screens/FavoritesScreen';
 
-// Define your navigation parameters
+// Define navigation types
 export type RootStackParamList = {
   HomeTabs: undefined;
   RecipeDetail: { recipeId: string };
@@ -20,7 +20,7 @@ export type HomeTabsParamList = {
 const Stack = createStackNavigator<RootStackParamList>();
 const Tab = createBottomTabNavigator<HomeTabsParamList>();
 
-// Bottom tab navigator
+// Bottom tabs component
 const HomeTabs = () => {
   return (
     <Tab.Navigator>
@@ -30,7 +30,7 @@ const HomeTabs = () => {
   );
 };
 
-// Main app navigator
+// Main navigator component
 const AppNavigator = () => {
   return (
     <NavigationContainer>
