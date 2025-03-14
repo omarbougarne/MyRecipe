@@ -1,6 +1,7 @@
 export interface Recipe {
     idMeal: string;
     strMeal: string;
+    strDrinkAlternate: string | null;
     strCategory: string;
     strArea: string;
     strInstructions: string;
@@ -8,6 +9,7 @@ export interface Recipe {
     strTags: string;
     strYoutube: string;
     ingredients: Ingredient[];
+    dateModified: string | null;
 }
 
 export interface Ingredient {
@@ -20,4 +22,13 @@ export interface Category {
     strCategory: string;
     strCategoryThumb: string;
     strCategoryDescription: string;
+}
+
+export interface Area {
+    strArea: string;
+}
+
+export interface ApiResponse<T> {
+    meals: T[] | null;
+    categories?: Category[];
 }
