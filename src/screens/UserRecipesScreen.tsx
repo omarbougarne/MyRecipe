@@ -46,13 +46,13 @@ const UserRecipesScreen = () => {
       </View>
       
       {userRecipes.length === 0 ? (
-        <View style={styles.emptyContainer}>
-          <Text style={styles.emptyText}>You haven't created any recipes yet</Text>
-          <TouchableOpacity style={styles.emptyAddButton} onPress={handleAddRecipe}>
-            <Text style={styles.emptyAddButtonText}>Add Your First Recipe</Text>
-          </TouchableOpacity>
-        </View>
-      ) : (
+  <View style={styles.emptyContainer}>
+    <Text style={styles.emptyText}>You haven't created any recipes yet</Text>
+    <TouchableOpacity style={styles.emptyAddButton} onPress={handleAddRecipe}>
+      <Text style={styles.emptyAddButtonText}>Add Your First Recipe</Text>
+    </TouchableOpacity>
+  </View>
+) : (
         <FlatList
           data={userRecipes}
           renderItem={renderItem}
