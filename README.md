@@ -9,7 +9,21 @@ RecipeApp is a mobile application built with the latest version of **React Nativ
 - View detailed recipe info (ingredients, steps, images)
 - Responsive and user-friendly interface
 - Built with React Native (Expo or CLI)
+### 🏠 Home Screen
 
+![Home Screen](assets/screens/home.png)
+
+### 🔍 Search Recipes
+
+![Search Screen](assets/screens/search.png)
+
+### 🍲 Recipe Details
+
+![Recipe Details](assets/screens/detail.png)
+
+### 🧔 Profile
+
+![Recipe Details](assets/screens/detail.png)
 ## Requirements
 
 - Node.js >= 18
